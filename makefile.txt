@@ -1,0 +1,14 @@
+all:
+	g++ cloud.cpp cluster.cpp controller.cpp field.cpp main.cpp interface.cpp point.cpp functions.cpp saves.cpp -o program
+	program.exe
+	"C:\Program Files\gnuplot\bin\gnuplot.exe" < makeplot.txt
+	pause 100
+program.o: cloud.o cluster.o controller.o field.o main.o interface.o point.o saves.o 
+	g++ cloud.o cluster.o controller.o field.o main.o interface.o point.o saves.o -c program.exe
+	program.exe < input.txt
+	"C:\Program Files\gnuplot\bin\gnuplot.exe"
+	plot [-100:100][-100:100]\
+	for [i = 0:1] "".i.".dat"\
+	linetype 7 linecolor i + 1
+
+	

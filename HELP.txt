@@ -1,0 +1,11 @@
+List of the possible commands:
+
+CRCLOUD - creates a cloud of points with normal distribution
+PRCLOUD - prints the cloud of points with normal distribution
+PRFIELD - prints the field of points
+WAVE - turns WAVE algorithm
+DBSCAN - turns DBscan algorithm
+KMEANS - turns k-means algrotihm
+RESULT - to see result of the algorithm
+HELP - print all of possible commands
+EXIT - ends off the programm
